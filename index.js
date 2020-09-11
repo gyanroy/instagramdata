@@ -1,5 +1,17 @@
-const puppeteer = require('puppeteer');
-
+// const puppeteer = require('puppeteer');
+const request = require('request');
+opts = {
+    url : 'https://www.instagram.com/prabhu_india/?__a=1'
+};
+request.get(opts, function (error, response, body) {
+    //Handle error, and body
+    if (error) {
+        console.log(error);
+    } else {
+        console.log(response);
+    }
+});
+/*
 (async () => {
     // set some options (set headless to false so we can see 
     // this automated browsing experience)
@@ -31,3 +43,4 @@ const puppeteer = require('puppeteer');
     // close the browser
     await browser.close();
 })();
+*/
